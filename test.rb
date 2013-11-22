@@ -1,38 +1,27 @@
-class Numbers
-        def initialize(first_number, second_number)
-                @first_number  = first_number
-                @second_number = second_number
-        end
+class Numbers 
+   def initialize(a, b)
+    @a = a
+    @b = b
+   end
+     attr_accessor 'a', 'b'
+   def sum
+          @a + @b
+   end
 
-        attr_accessor 'first_number', 'second_number'
+   def diff
+         @a - @b
+   end
 
-        def sum
-                @first_number + @second_number
-        end
-
-        def diff
-                @first_number - @second_number
-        end
-
-        def product
-                @first_number * @second_number
-        end
-
+   def product
+        @a * @b 
+   end
 end
 
+print "enter two numbers"
+this = 
 
-puts "enter first number"
-first_number = gets.chomp.to_i
-
-puts "enter second number"
-second_number = gets.chomp.to_i
-
-result = Numbers.new first_number, second_number
-
-puts ""
-
+result = Numbers.new a, b
+puts""
 puts result.sum
-
 puts result.diff
-
 puts result.product
